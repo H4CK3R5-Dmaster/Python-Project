@@ -171,9 +171,17 @@ def main():
         if left_score >= WINNING_SCORE:
             won = True
             win_text = "Left Player Won!"
+            nom = database.Database().select_limit("joueur", "joueur1")[0]
+            nom2 = database.Database().select_limit("joueur", "joueur2")[0]
+            task = (nom, nom2, left_score, right_score)
+            database.Database().create_rq_insert("pong", task)
         elif right_score >= WINNING_SCORE:
             won = True
             win_text = "Right Player Won!"
+            nom = database.Database().select_limit("joueur", "joueur1")[0]
+            nom2 = database.Database().select_limit("joueur", "joueur2")[0]
+            task = (nom2, nom, right_score, left_score)
+            database.Database().create_rq_insert("pong", task)
 
         if won:
             text = SCORE_FONT.render(win_text, 1, WHITE)

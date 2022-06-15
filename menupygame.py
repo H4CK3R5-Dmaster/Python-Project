@@ -15,9 +15,7 @@ truc = {
     "a":""
 }
 # Constants and global variables
-ABOUT = [f'pygame-menu {pygame_menu.__version__}',
-         f'Author: {pygame_menu.__author__}',
-         f'Email: {pygame_menu.__email__}']
+
 DIFFICULTY = ['Pokemon shooter']
 FPS = 60
 WINDOW_SIZE = (690, 480)
@@ -45,6 +43,7 @@ def play_function(difficulty: List, font: 'pygame.font.Font', test: bool = False
     
     assert isinstance(difficulty, list)
     difficulty = difficulty[0]
+    
     assert isinstance(difficulty, str)
 
     # Define globals

@@ -1,7 +1,6 @@
 import pygame
 import pytmx
 import pyscroll
-import serial
 import time
 from player import Player
 from player2 import Player2

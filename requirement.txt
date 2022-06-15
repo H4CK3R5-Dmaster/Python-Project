@@ -1,0 +1,6 @@
+ursina
+pygame
+pytmx
+pyscroll
+sqlite3
+pygame_menu
