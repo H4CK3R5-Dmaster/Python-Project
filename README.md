@@ -2,9 +2,12 @@
 
 <p align="center">commandes</p>
 
-```diff
-@@ py -m pip install -r requirement.txt @@
+```
+py -m pip install -r requirement.txt 
 
-@@ py menupygame.py @@
+```
+```
+
+py menupygame.py
 
 ```
